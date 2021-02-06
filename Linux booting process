@@ -1,0 +1,63 @@
+Press the power button on your system,until the Linux login prompt appears?
+
+The following are the 6 high level stages of a typical Linux boot process.
+
+BIOS 
+MBR
+GRUB
+Kernel
+Init
+Runlevel
+
+
+A. BIOS:- BIOS stands for Basic Input/Output System
+
+Performs some system integrity checks
+Searches, loads, and executes the boot loader program.
+It looks for boot loader in floppy, cd-rom, or hard drive.
+Once the boot loader program is detected and loaded into the memory, BIOS gives the control to it.
+So, in simple terms BIOS loads and executes the MBR boot loader.
+
+B. MBR
+
+MBR stands for Master Boot Record.
+It is located in the 1st sector of the bootable disk. Typically /dev/hda, or /dev/sda
+MBR is less than 512 bytes in size.
+It contains information about GRUB
+So, in simple terms MBR loads and executes the GRUB boot loader.
+
+C. GRUB
+
+GRUB stands for Grand Unified Bootloader.
+If you have multiple kernel images installed on your system, you can choose which one to be executed.
+GRUB displays a splash screen, waits for few seconds, if you don’t enter anything, it loads the default kernel image as specified in the grub configuration file.
+GRUB has the knowledge of the filesystem  it contains kernel and initrd image.
+So, in simple terms GRUB just loads and executes Kernel and initrd images.
+
+D. Kernel:-
+
+Mounts the root file system as specified in grub conf file.
+Kernel executes the init program
+Since init was the 1st program to be executed by Linux Kernel, it has the process id (PID) of 1.
+initrd stands for Initial RAM Disk.
+initrd is used by kernel as temporary root file system until kernel is booted and the real root file system is mounted. It also contains necessary drivers compiled inside, which helps it to access the hard drive partitions, and other hardware.
+
+E. Init
+
+Looks at the /etc/inittab file to decide the Linux run level.
+Init identifies the default initlevel from /etc/inittab and uses that to load all appropriate program.
+Typically you would set the default run level to either 3 or 5.
+
+F. Runlevel Program
+
+When the Linux system is booting up, you might see various services getting started.
+runlevel programs, executed from the run level directory as defined by your run level.
+Depending on your default init level setting, the system will execute the programs from one of the following directories.
+Programs starts with S are used during startup. S for startup.
+Programs starts with K are used during shutdown. K for kill.
+There are numbers right next to S and K in the program names. Those are the sequence number in which the programs should be started or killed.
+For example, S12syslog is to start the syslog deamon, which has the sequence number of 12. S80sendmail is to start the sendmail daemon, which has the sequence number of 80. So, syslog program will be started before sendmail.
+
+
+
+
