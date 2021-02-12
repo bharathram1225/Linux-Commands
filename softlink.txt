@@ -1,0 +1,139 @@
+	Commands including hardlinks and soft links 	
+
+login
+login bharathram
+sudo login
+sudo adduser lakshman
+login lakshman
+ls -l
+cd /dev
+ls -l
+clear
+ls -l sd*
+clear
+cd /etc
+ls
+clear
+ls net*
+cat /networks/interfaces
+sudo nano networks/interfaces
+cd ..
+ls
+cat /proc/cpuinfo
+ls -l  /proc/cpuinfo
+clear
+ls /etc/init.d/network-manager 
+ls -l /etc/init.d/network-manager
+cat hi > bharath.txt
+ls -l
+clear
+ls -l b*
+cat bharath.txt
+pwd
+cd /home/bharathram/
+clear
+cat hi > bharath.txt
+echo hi > bharath.txt
+ls -l bharath.txt 
+chmod 777 bharath.txt 
+ls -l bharath.txt 
+man startx
+man chmod
+hostname
+ls -l hostname
+whereis hostname
+ls -al /bin/hostname
+clear
+ls
+cat /usr/bin/startx > xstart
+ls -l xstart
+chmod ugo+x xstart;ls -l xstart
+chmod a+x xstart;ls -l xstart
+chmod +x xstart;ls -l xstart
+touch note
+touch note1
+touch note2
+ls note*
+ls -l note*
+chmod u+x note note1 note2;ls -l note*
+chmod go-r note note1 note2;ls -l note*
+ls -l xstart
+clear
+ls -l xstart
+chmod a-x,go+r xstart;ls -l 
+chmod a-x,go+r xstart;ls -l xstart
+clear
+ls -l xstart
+chmod 666 xstart 
+ls -l xstart 
+chmod 644 xstart; ls -l xstart 
+chmod u-rw,go-r xstart; ls -l xstart 
+man chgrp
+man chown
+touch note4 note5;ls -l note*
+sudo chown lakshman note4
+ls -l note*
+sudo addgroup ramayan
+chgrp ramayan note4 note5;ls -l note*
+sudo chgrp ramayan note4 note5;ls -l note*
+history 
+history > 8feb11:30to12:30
+cat 8feb11\:30to12\:30 
+clear
+man addgroup
+man removegroup
+man groupdel
+man userdel
+man ls
+man ln
+ls -l note*
+ln note2 employee
+ls -l note*
+ln note noteemployee
+ls -l note*
+ls -al note*
+ls -l employee 
+ls -al employee 
+ls -li note*
+ln note noteemployee1;ls -li note*
+rm noteemployee1
+ls -l note*
+rm note
+ls -l note*
+clear
+ln note /dev/sdb1/hi
+touch note
+ln note /dev/sdb1/hi
+ln note notetrail;ls -ail note*
+ln note notetrail;ls -il note*
+clear
+ln -s note /dev/sdb1/hi
+sudo ln -s note /dev/sdb1/hi
+sudo ln -s note softhi
+sudo ln -s note notesofthi
+ls -li note*
+rm note;ls -li note*
+sudo apt-get git
+sudo apt-get install git
+nano first.sh
+clear
+ls -l first.sh
+cat first.sh 
+chmod 744 first.sh 
+ls -l first.sh 
+./first.sh 
+nano first.c
+gcc first.c -o burr
+nano first.c
+gcc first.c -o burr
+ls -l b*
+./burr
+clear
+pwd
+ls -l  note*
+rm note*
+ls 
+rm softhi xstart
+la
+cat .bash_history
+sudo shutdown 0
